@@ -44,6 +44,9 @@ public class UserModel implements Parcelable {
         }
     };
 
+    public UserModel() {
+    }
+
     public String getName() {
         return name;
     }
