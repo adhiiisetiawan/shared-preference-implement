@@ -64,10 +64,9 @@ public class FormUserPreferenceActivity extends AppCompatActivity implements Vie
             case TYPE_EDIT:
                 actionBarTitle = "Edit";
                 btnTitle = "Update";
-                break;
+                showPreferenceInForm();
         }
 
-        showPreferenceInForm();
 
         if (getSupportActionBar() != null){
             getSupportActionBar().setTitle(actionBarTitle);
@@ -81,7 +80,7 @@ public class FormUserPreferenceActivity extends AppCompatActivity implements Vie
 
             edtName.setText(userModel.getName());
             edtEmail.setText(userModel.getEmail());
-            edtAge.setText(userModel.getAge());
+            edtAge.setText(String.valueOf(userModel.getAge()));
             edtPhone.setText(userModel.getPhoneNumber());
             if (userModel.isLove()){
                 rbYes.setChecked(true);
